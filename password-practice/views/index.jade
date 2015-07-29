@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  h1= title
+  p Please break my code! :) 
+  
+  h1 #{nay}
+  
+  form(action="/signup" method='post')
+    p
+      label(for='email') Enter an Email Address
+      input(type='email' id='email' name='email' placeholder='name@example.com')
+    p
+      label(for='password') Enter a Password 
+      input(type='password' id='password' name='password' placeholder="********")
+    p  
+      label(for ='confirm') Confirm Password 
+      input(type='password' id='confirm' name='confirm' placeholder='********')
+    p
+      input(type='submit' id='submit' value='Create Account')
+    
+  a(href='/login') Login 
+
+
+
+
+//- 1. var hash = bcrypt.hashSync('password', 8); 
+//- 2. Generate salt 
+//- 3. take user password 
+//- 4. combine salt and password 
+//- 5. hash that 
+//- 
+//- check password 
+//- 1. read hash 
+//- 2. figure out salt 
+//- 3. take user password plus salt 
+//- 4. hash 
+//- 5. compare to hash 

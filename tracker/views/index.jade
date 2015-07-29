@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  h1= title
+  p Add a new story 
+    form(method ='post' action ='/add')
+     p
+      label(for = 'name') Story Name 
+      input(type='text' size='55' id ='name' name='name')
+     p  
+      label(for='1') Difficulty Estimate: 1 
+      input(type="radio" name='estimate' id='1' value ='1')  
+      input(type="radio" name='estimate' id='2' value ='2')  
+      input(type="radio" name='estimate' id='3' value ='3')  
+      label(for='3')  3
+     p
+      label(for='state') Current State 
+      select(name = 'state')
+        option(value='unstarted') Unstarted 
+        option(value='started') Started 
+        option(value='finished') Finished 
+        option(value='delivered') Delivered 
+        option(value='rejected') Rejected 
+        option(value='accepted') Accepted 
+     p 
+      input(type='submit' value='Submit New Story')
+        
+      
+  for foobar in foobars 
+    div.stories 
+      fieldset 
+          p Name: 
+            =story.name
+          p Diffuculty Estimate:  
+            =story.estimate
+          p Current State:  
+            =story.current_state
+          

@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1 Login
+  p Please logging with your email and password 
+  
+  h1 #{yay}
+  
+  form(action="/login" method='post')
+    p
+      label(for='email') Enter an Email Address
+      input(type='email' id='email' name='email' placeholder='name@example.com')
+    p
+      label(for='password') Enter a Password 
+      input(type='password' id='password' name='password' placeholder="********")
+    p
+      input(type='submit' id='submit' value='Login')
+      
+  a(href='/') Create an Account
+    
+    

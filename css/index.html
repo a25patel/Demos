@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+  <title>
+    css practice
+  </title>
+
+  <style media ='screen'>
+    *{
+      box-sizing: border-box;
+    }
+
+    html{
+      background-color: orange;
+    }
+
+    body{
+      margin: 0;
+      padding: 0;
+    }
+
+    header{
+      min-height: 60px;
+      background-color: magenta;
+    }
+
+    main{
+      height: 600px;
+      background-color: lime;
+    }
+
+    footer{
+      min-height: 60px;
+      background-color: orange;
+    }
+
+    .container{
+
+      margin: 0 auto;
+      width: 960px;
+      height: 100%;
+      padding: 1em;
+    }
+
+    main> .container{
+      background-color: gray;
+    }
+
+    .left{
+      float: left;
+    }
+
+    .right{
+      float: right;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class='container'>
+      <p class='left'>  Hello World </p>
+      <p class='right'> Hello Universe </p>
+    </div>
+  </header>
+
+  <main>
+    <div class='container'>
+        Hello Earth
+    </div>
+  </main>
+
+  <footer>
+    <div class='container'>
+        Hello People
+    </div>
+  </footer>
+</body>
+</html>
